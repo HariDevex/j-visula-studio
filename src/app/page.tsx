@@ -1,9 +1,9 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Transformations from "@/components/Transformations";
-import TrustProof from "@/components/TrustProof";
-import Portfolio from "@/components/Portfolio";
+import Packages from "@/components/Packages";
+import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import TrustProof from "@/components/TrustProof";
 import Contact from "@/components/Contact";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import Footer from "@/components/Footer";
@@ -14,9 +14,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Transformations />
+        <Packages />
+        <Gallery />
         <TrustProof />
-        <Portfolio />
         <Testimonials />
         <Contact />
       </main>

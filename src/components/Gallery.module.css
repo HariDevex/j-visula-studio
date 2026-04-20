@@ -1,0 +1,195 @@
+.gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery::before {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(8, 217, 214, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: rgba(8, 217, 214, 0.1);
+  border: 1px solid rgba(8, 217, 214, 0.3);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neon-cyan);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.title {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+}
+
+.categoryBtn {
+  padding: 10px 20px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.categoryBtn:hover {
+  border-color: var(--neon-cyan);
+  color: white;
+}
+
+.categoryBtnActive {
+  background: linear-gradient(135deg, var(--neon-cyan), #06b6b3);
+  border-color: var(--neon-cyan);
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 250px);
+  gap: 16px;
+}
+
+.gridItem {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gridItem.tall {
+  grid-row: span 2;
+}
+
+.gridItem.wide {
+  grid-column: span 2;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gridItem:hover .image {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+.gridItem:hover .overlay {
+  opacity: 1;
+}
+
+.overlayContent {
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.gridItem:hover .overlayContent {
+  transform: translateY(0);
+}
+
+.viewText {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.viewIcon {
+  color: var(--neon-pink);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 200px);
+  }
+
+  .gridItem.tall,
+  .gridItem.wide {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 180px);
+    gap: 12px;
+  }
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 15, 25, 0.98);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lightboxClose:hover {
+  background: var(--neon-pink);
+}
+
+.lightboxImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 16px;
+}
