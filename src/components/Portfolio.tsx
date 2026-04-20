@@ -118,6 +118,7 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className={styles.overlay}>
+                  <span className={styles.viewProject}>View Project</span>
                   <h3 className={styles.overlayTitle}>{item.title}</h3>
                   <span className={styles.overlayCategory}>{item.category}</span>
                 </div>

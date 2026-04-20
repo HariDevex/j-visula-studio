@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Wand2, Scissors, Palette, Share2, Image, Sparkles } from "lucide-react";
+import { Wand2, Palette, Share2, Image } from "lucide-react";
 import styles from "./Services.module.css";
 
 interface Service {
@@ -13,40 +13,28 @@ interface Service {
 
 const services: Service[] = [
   {
-    icon: <Wand2 size={28} />,
-    title: "Photo Retouching",
-    description: "Professional skin retouching, color correction, and enhancement that brings out the best in every image while maintaining natural beauty.",
+    icon: <Wand2 size={32} />,
+    title: "Photo Editing",
+    description: "Transform your photos with professional color grading, exposure correction, and creative adjustments that bring out the best in every shot.",
     index: "01",
   },
   {
-    icon: <Scissors size={28} />,
-    title: "Background Removal",
-    description: "Clean cutouts and transparent backgrounds with precise edge detection. Perfect for e-commerce and product photography.",
+    icon: <Image size={32} />,
+    title: "Retouching",
+    description: "Expert skin retouching and enhancement that maintains natural beauty while removing imperfections for a flawless look.",
     index: "02",
   },
   {
-    icon: <Palette size={28} />,
+    icon: <Palette size={32} />,
     title: "Poster Design",
-    description: "Eye-catching promotional posters and banners that capture attention and communicate your brand message effectively.",
+    description: "Eye-catching promotional posters and visual designs that capture attention and communicate your brand message effectively.",
     index: "03",
   },
   {
-    icon: <Share2 size={28} />,
+    icon: <Share2 size={32} />,
     title: "Social Media Creatives",
-    description: "Engaging posts, stories, and ads designed to boost engagement and grow your following across all platforms.",
+    description: "Engaging posts, stories, and ads designed to boost engagement and help your brand stand out on social platforms.",
     index: "04",
-  },
-  {
-    icon: <Image size={28} />,
-    title: "Thumbnail Design",
-    description: "Click-worthy YouTube thumbnails that stand out in search results and drive more views to your content.",
-    index: "05",
-  },
-  {
-    icon: <Sparkles size={28} />,
-    title: "Color Grading",
-    description: "Cinematic color grading that sets the mood and creates a consistent visual style for your brand or project.",
-    index: "06",
   },
 ];
 
@@ -55,7 +43,7 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -81,9 +69,9 @@ export default function Services() {
           transition={{ duration: 0.6 }}
         >
           <span className={styles.sectionLabel}>What We Do</span>
-          <h2 className={styles.title}>Services</h2>
+          <h2 className={styles.title}>Our Services</h2>
           <p className={styles.subtitle}>
-            From basic edits to complex manipulations, we deliver premium quality results tailored to your needs.
+            Professional editing solutions tailored to bring your vision to life.
           </p>
         </motion.div>
 

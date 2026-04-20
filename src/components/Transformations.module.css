@@ -1,0 +1,154 @@
+.transformations {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.transformations::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neon-pink), var(--neon-cyan), transparent);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, rgba(255, 46, 99, 0.15), rgba(255, 46, 99, 0.05));
+  border: 1px solid rgba(255, 46, 99, 0.3);
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--neon-pink);
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 30px rgba(255, 46, 99, 0.2);
+}
+
+.title {
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.comparisonCard {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.comparisonCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 46, 99, 0.1);
+}
+
+.cardHeader {
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cardCategory {
+  padding: 6px 14px;
+  background: var(--glass-bg);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cardContent {
+  position: relative;
+}
+
+.cardLabels {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.cardLabel {
+  padding: 8px 16px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.beforeLabel {
+  color: var(--text-secondary);
+}
+
+.afterLabel {
+  color: var(--neon-pink);
+}
+
+.ctaHint {
+  text-align: center;
+  padding: 16px;
+  font-size: 13px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--glass-border);
+}
+
+.ctaHint strong {
+  color: var(--neon-cyan);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .comparisonCard {
+    border-radius: 16px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+  }
+}
