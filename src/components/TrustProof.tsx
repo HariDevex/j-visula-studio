@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Clock, CheckCircle, Star, TrendingUp } from "lucide-react";
+import { Clock, CheckCircle, Star, Globe } from "lucide-react";
 import styles from "./TrustProof.module.css";
 
 const stats = [
   {
     id: 1,
     icon: <CheckCircle size={28} />,
-    number: "500+",
+    number: "50+",
     label: "Edits Completed",
     description: "Projects delivered successfully",
   },
@@ -24,14 +24,14 @@ const stats = [
     icon: <Star size={28} />,
     number: "4.9/5",
     label: "Client Rating",
-    description: "Average client satisfaction",
+    description: "High-quality output",
   },
   {
     id: 4,
-    icon: <TrendingUp size={28} />,
-    number: "98%",
-    label: "Repeat Clients",
-    description: "Clients who return for more",
+    icon: <Globe size={28} />,
+    number: "Online",
+    label: "Serving Clients",
+    description: "Worldwide online service",
   },
 ];
 

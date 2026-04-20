@@ -27,9 +27,9 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
         >
           <span className={styles.sectionLabel}>Get In Touch</span>
-          <h2 className={styles.title}>Let&apos;s Create Something Amazing</h2>
+          <h2 className={styles.title}>Send your image. Get it transformed.</h2>
           <p className={styles.subtitle}>
-            Ready to transform your visuals? Contact us today for a free quote and let&apos;s discuss your project.
+            Ready to transform your photos into cinematic visuals? Send us your image and get a quick quote today.
           </p>
         </motion.div>
 

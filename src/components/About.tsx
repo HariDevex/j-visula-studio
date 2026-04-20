@@ -17,12 +17,11 @@ export default function About() {
         >
           <div className={styles.textContent}>
             <span className={styles.sectionLabel}>About Us</span>
-            <h2 className={styles.title}>Crafting Visual Excellence Since Day One</h2>
+            <h2 className={styles.title}>Creating Cinematic Visuals</h2>
             <p className={styles.description}>
-              J Visual Studio specializes in high-quality Photoshop editing and creative visual design. 
-              We transform ordinary images into professional, eye-catching visuals that capture 
-              attention and drive results. Our team combines technical expertise with creative 
-              vision to deliver work that exceeds expectations.
+              J Visual Studio focuses on transforming ordinary images into cinematic visuals 
+              using professional Photoshop techniques. We combine technical expertise with 
+              creative vision to deliver visuals that tell your story.
             </p>
             <div className={styles.stats}>
               <div className={styles.stat}>
