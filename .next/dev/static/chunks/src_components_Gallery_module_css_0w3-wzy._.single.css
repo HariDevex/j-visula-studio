@@ -1,0 +1,196 @@
+/* [project]/src/components/Gallery.module.css [app-client] (css) */
+.Gallery-module__3QxX8q__gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.Gallery-module__3QxX8q__gallery:before {
+  content: "";
+  pointer-events: none;
+  background: radial-gradient(circle, #08d9d60f 0%, #0000 70%);
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Gallery-module__3QxX8q__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.Gallery-module__3QxX8q__sectionLabel {
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #08d9d61a;
+  border: 1px solid #08d9d64d;
+  border-radius: 50px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.Gallery-module__3QxX8q__title {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 800;
+}
+
+.Gallery-module__3QxX8q__categoryBtn {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.Gallery-module__3QxX8q__categoryBtn:hover {
+  border-color: var(--neon-cyan);
+  color: #fff;
+}
+
+.Gallery-module__3QxX8q__categoryBtnActive {
+  background: linear-gradient(135deg, var(--neon-cyan), #06b6b3);
+  border-color: var(--neon-cyan);
+  color: #fff;
+}
+
+.Gallery-module__3QxX8q__grid {
+  grid-template-rows: repeat(3, 250px);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  display: grid;
+}
+
+.Gallery-module__3QxX8q__gridItem {
+  cursor: pointer;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Gallery-module__3QxX8q__gridItem.Gallery-module__3QxX8q__tall {
+  grid-row: span 2;
+}
+
+.Gallery-module__3QxX8q__gridItem.Gallery-module__3QxX8q__wide {
+  grid-column: span 2;
+}
+
+.Gallery-module__3QxX8q__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s;
+}
+
+.Gallery-module__3QxX8q__gridItem:hover .Gallery-module__3QxX8q__image {
+  transform: scale(1.1);
+}
+
+.Gallery-module__3QxX8q__overlay {
+  opacity: 0;
+  background: linear-gradient(to top, #000c, #0000);
+  align-items: flex-end;
+  padding: 24px;
+  transition: opacity .3s;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.Gallery-module__3QxX8q__gridItem:hover .Gallery-module__3QxX8q__overlay {
+  opacity: 1;
+}
+
+.Gallery-module__3QxX8q__overlayContent {
+  transition: transform .3s;
+  transform: translateY(20px);
+}
+
+.Gallery-module__3QxX8q__gridItem:hover .Gallery-module__3QxX8q__overlayContent {
+  transform: translateY(0);
+}
+
+.Gallery-module__3QxX8q__viewText {
+  color: #fff;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+}
+
+.Gallery-module__3QxX8q__viewIcon {
+  color: var(--neon-pink);
+}
+
+@media (max-width: 1024px) {
+  .Gallery-module__3QxX8q__grid {
+    grid-template-rows: repeat(6, 200px);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Gallery-module__3QxX8q__gridItem.Gallery-module__3QxX8q__tall, .Gallery-module__3QxX8q__gridItem.Gallery-module__3QxX8q__wide {
+    grid-area: span 1 / span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .Gallery-module__3QxX8q__grid {
+    grid-template-rows: repeat(6, 180px);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.Gallery-module__3QxX8q__lightbox {
+  z-index: 2000;
+  background: #0b0f19fa;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.Gallery-module__3QxX8q__lightboxClose {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  transition: all .3s;
+  display: flex;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+}
+
+.Gallery-module__3QxX8q__lightboxClose:hover {
+  background: var(--neon-pink);
+}
+
+.Gallery-module__3QxX8q__lightboxImage {
+  object-fit: contain;
+  border-radius: 16px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+/*# sourceMappingURL=src_components_Gallery_module_css_0w3-wzy._.single.css.map*/

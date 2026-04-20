@@ -1,0 +1,201 @@
+/* [project]/src/components/Packages.module.css [app-client] (css) */
+.Packages-module__ZuoChq__packages {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.Packages-module__ZuoChq__packages:before {
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--neon-pink), var(--neon-cyan), transparent);
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Packages-module__ZuoChq__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.Packages-module__ZuoChq__sectionLabel {
+  color: var(--neon-pink);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: #ff2e631a;
+  border: 1px solid #ff2e634d;
+  border-radius: 50px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+}
+
+.Packages-module__ZuoChq__title {
+  margin-bottom: 16px;
+  font-size: clamp(40px, 5vw, 64px);
+  font-weight: 800;
+}
+
+.Packages-module__ZuoChq__subtitle {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.Packages-module__ZuoChq__grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  display: grid;
+}
+
+.Packages-module__ZuoChq__card {
+  background: var(--bg-primary);
+  border-radius: 24px;
+  padding: 40px 32px;
+  transition: all .4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.Packages-module__ZuoChq__card:before {
+  content: "";
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
+  height: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Packages-module__ZuoChq__card.Packages-module__ZuoChq__featured {
+  background: linear-gradient(135deg, #ff2e631a, #08d9d60d);
+  border: 1px solid #ff2e634d;
+}
+
+.Packages-module__ZuoChq__card.Packages-module__ZuoChq__featured:before {
+  height: 6px;
+}
+
+.Packages-module__ZuoChq__card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 80px #0006;
+}
+
+.Packages-module__ZuoChq__badge {
+  background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 40px;
+  font-size: 11px;
+  font-weight: 700;
+  position: absolute;
+  top: 20px;
+  right: -35px;
+  transform: rotate(45deg);
+}
+
+.Packages-module__ZuoChq__iconWrapper {
+  background: linear-gradient(135deg, var(--neon-pink), var(--neon-cyan));
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.Packages-module__ZuoChq__icon {
+  color: #fff;
+}
+
+.Packages-module__ZuoChq__packageName {
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.Packages-module__ZuoChq__packagePrice {
+  margin-bottom: 8px;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.Packages-module__ZuoChq__packagePrice span {
+  color: var(--text-secondary);
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.Packages-module__ZuoChq__packageDescription {
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.Packages-module__ZuoChq__features {
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.Packages-module__ZuoChq__feature {
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  display: flex;
+}
+
+.Packages-module__ZuoChq__featureIcon {
+  color: var(--neon-cyan);
+}
+
+.Packages-module__ZuoChq__cta {
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  text-align: center;
+  background: #ffffff0d;
+  border-radius: 12px;
+  width: 100%;
+  padding: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all .3s;
+  display: block;
+}
+
+.Packages-module__ZuoChq__cta:hover {
+  background: var(--neon-pink);
+  border-color: var(--neon-pink);
+  transform: translateY(-2px);
+}
+
+.Packages-module__ZuoChq__cta.Packages-module__ZuoChq__featuredCta {
+  background: linear-gradient(135deg, var(--neon-pink), #ff4d7a);
+  border: none;
+  box-shadow: 0 10px 40px #ff2e634d;
+}
+
+.Packages-module__ZuoChq__cta.Packages-module__ZuoChq__featuredCta:hover {
+  box-shadow: 0 15px 50px #ff2e6380;
+}
+
+@media (max-width: 1024px) {
+  .Packages-module__ZuoChq__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=src_components_Packages_module_css_0w3-wzy._.single.css.map*/

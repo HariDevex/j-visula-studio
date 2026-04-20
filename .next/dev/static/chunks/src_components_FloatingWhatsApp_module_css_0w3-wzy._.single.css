@@ -1,0 +1,93 @@
+/* [project]/src/components/FloatingWhatsApp.module.css [app-client] (css) */
+.FloatingWhatsApp-module__QndPVW__floatingWhatsApp {
+  z-index: 1000;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.FloatingWhatsApp-module__QndPVW__whatsappButton {
+  background: linear-gradient(135deg, #25d366, #20bd5a);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+  animation: 2s ease-in-out infinite FloatingWhatsApp-module__QndPVW__pulse;
+  display: flex;
+  box-shadow: 0 10px 30px #25d36666, 0 0 #25d366b3;
+}
+
+.FloatingWhatsApp-module__QndPVW__whatsappButton:hover {
+  animation: none;
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px #25d36680, 0 0 0 8px #25d36633;
+}
+
+.FloatingWhatsApp-module__QndPVW__whatsappIcon {
+  color: #fff;
+}
+
+.FloatingWhatsApp-module__QndPVW__tooltip {
+  background: var(--bg-primary);
+  border: 1px solid var(--glass-border);
+  white-space: nowrap;
+  color: var(--text-primary);
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 10px;
+  margin-right: 16px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .3s;
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  transform: translateY(-50%);
+  box-shadow: 0 10px 30px #0000004d;
+}
+
+.FloatingWhatsApp-module__QndPVW__tooltip:after {
+  content: "";
+  border: 8px solid #0000;
+  border-left-color: var(--glass-border);
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+}
+
+.FloatingWhatsApp-module__QndPVW__floatingWhatsApp:hover .FloatingWhatsApp-module__QndPVW__tooltip {
+  opacity: 1;
+  transform: translateY(-50%)translateX(-5px);
+}
+
+@keyframes FloatingWhatsApp-module__QndPVW__pulse {
+  0%, 100% {
+    box-shadow: 0 10px 30px #25d36666, 0 0 #25d366b3;
+  }
+
+  50% {
+    box-shadow: 0 10px 30px #25d36666, 0 0 0 12px #25d36600;
+  }
+}
+
+@media (max-width: 640px) {
+  .FloatingWhatsApp-module__QndPVW__floatingWhatsApp {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .FloatingWhatsApp-module__QndPVW__whatsappButton {
+    width: 56px;
+    height: 56px;
+  }
+
+  .FloatingWhatsApp-module__QndPVW__tooltip {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=src_components_FloatingWhatsApp_module_css_0w3-wzy._.single.css.map*/

@@ -1,0 +1,111 @@
+/* [project]/src/components/Header.module.css [app-client] (css) */
+.Header-module__hBw1pG__header {
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all .3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Header-module__hBw1pG__headerScrolled {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  background: #0b0f19d9;
+  padding: 16px 0;
+}
+
+.Header-module__hBw1pG__nav {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.Header-module__hBw1pG__logo {
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.Header-module__hBw1pG__logoAccent {
+  color: var(--neon-pink);
+}
+
+.Header-module__hBw1pG__navLinks {
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  display: flex;
+}
+
+.Header-module__hBw1pG__navLink {
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color .3s;
+  position: relative;
+}
+
+.Header-module__hBw1pG__navLink:after {
+  content: "";
+  background: var(--neon-pink);
+  width: 0;
+  height: 2px;
+  transition: width .3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.Header-module__hBw1pG__navLink:hover {
+  color: var(--text-primary);
+}
+
+.Header-module__hBw1pG__navLink:hover:after {
+  width: 100%;
+}
+
+.Header-module__hBw1pG__cta {
+  background: var(--neon-pink);
+  color: var(--text-primary);
+  box-shadow: var(--glow-pink);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all .3s;
+}
+
+.Header-module__hBw1pG__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px #ff2e6380;
+}
+
+.Header-module__hBw1pG__mobileToggle {
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  display: none;
+}
+
+.Header-module__hBw1pG__mobileToggle span {
+  background: var(--text-primary);
+  width: 24px;
+  height: 2px;
+  transition: all .3s;
+}
+
+@media (max-width: 768px) {
+  .Header-module__hBw1pG__navLinks, .Header-module__hBw1pG__header .Header-module__hBw1pG__cta {
+    display: none;
+  }
+
+  .Header-module__hBw1pG__mobileToggle {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=src_components_Header_module_css_0w3-wzy._.single.css.map*/
