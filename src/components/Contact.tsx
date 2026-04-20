@@ -47,7 +47,7 @@ export default function Contact() {
             </p>
             <div className={styles.ctaButtons}>
               <a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/919677589131" 
                 className={`${styles.ctaButton} ${styles.whatsappCta}`}
                 target="_blank"
                 rel="noopener noreferrer"

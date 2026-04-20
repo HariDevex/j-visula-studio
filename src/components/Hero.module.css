@@ -63,6 +63,46 @@
   max-width: 800px;
 }
 
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+
+.textContent {
+  max-width: 600px;
+}
+
+.comparisonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comparisonLabel {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .textContent {
+    max-width: 100%;
+  }
+
+  .comparisonWrapper {
+    margin-top: 40px;
+  }
+}
+
 .tagline {
   display: inline-flex;
   align-items: center;
