@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle, Send } from "lucide-react";
+import { MessageCircle, Send, Image } from "lucide-react";
 
 const InstagramIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -26,10 +26,13 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className={styles.sectionLabel}>Get In Touch</span>
-          <h2 className={styles.title}>Send your image. Get it transformed.</h2>
+          <span className={styles.sectionLabel}>
+            <Image size={16} />
+            Start Your Project
+          </span>
+          <h2 className={styles.title}>Send Your Image. Get It Transformed.</h2>
           <p className={styles.subtitle}>
-            Ready to transform your photos into cinematic visuals? Send us your image and get a quick quote today.
+            Ready to turn your photos into stunning visuals? Send us your image and get a quick quote today.
           </p>
         </motion.div>
 
@@ -41,9 +44,9 @@ export default function Contact() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <div className={styles.info}>
-            <h3 className={styles.infoTitle}>Connect With Us</h3>
+            <h3 className={styles.infoTitle}>Let&apos;s Connect</h3>
             <p className={styles.infoDescription}>
-              Prefer to reach out directly? Connect with us on WhatsApp for quick responses or DM us on Instagram to see our latest work.
+              Prefer to reach out directly? Chat with us on WhatsApp for quick responses or follow us on Instagram to see our latest work.
             </p>
             <div className={styles.ctaButtons}>
               <a 
@@ -53,7 +56,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
               >
                 <MessageCircle size={20} />
-                Chat on WhatsApp
+                Get Your Edit Now
               </a>
               <a 
                 href="https://instagram.com/jvisualstudio" 
@@ -77,11 +80,11 @@ export default function Contact() {
             <h3 className={styles.formTitle}>Send Us a Message</h3>
             <form className={styles.formFields} onSubmit={handleSubmit}>
               <div className={styles.field}>
-                <label className={styles.label}>Name</label>
+                <label className={styles.label}>Your Name</label>
                 <input 
                   type="text" 
                   className={styles.input}
-                  placeholder="Your name"
+                  placeholder="What's your name?"
                   required
                 />
               </div>
@@ -95,16 +98,17 @@ export default function Contact() {
                 />
               </div>
               <div className={styles.field}>
-                <label className={styles.label}>Message</label>
+                <label className={styles.label}>Tell Us About Your Project</label>
                 <textarea 
                   className={styles.textarea}
-                  placeholder="Tell us about your project..."
+                  placeholder="Describe what you're looking for - the style, changes, or any specific requirements..."
+                  rows={4}
                   required
                 />
               </div>
               <button type="submit" className={styles.submitButton}>
-                Send Message
-                <Send size={18} style={{ marginLeft: 8 }} />
+                Send Your Photo
+                <Send size={18} />
               </button>
             </form>
           </motion.div>

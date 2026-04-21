@@ -190,6 +190,10 @@
 }
 
 .submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 20px 36px;
   background: linear-gradient(135deg, var(--neon-pink), #ff4d7a);
   color: var(--text-primary);
